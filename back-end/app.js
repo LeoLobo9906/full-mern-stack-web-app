@@ -78,5 +78,18 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+// a route to handle fetching information for the About Us page
+app.get('/about', (req, res) => {
+  res.json({
+    name: 'Leonardo Villalobos',
+    paragraphs: [
+      'Hi, my name is Leonardo Villalobos. I am a Computer Science student at the NYU Tandon School of Engineering. I grew up in Jackson Heights, Queens, and my family is from Mexico. Growing up in New York City and coming from a Mexican background have both been important parts of my life.',
+      'I am interested in software development, technology, and building projects. Through my coursework and personal projects, I have been able to explore different areas of computer science and continue developing my programming skills.',
+      'Outside of computer science, I enjoy music, photography, and boxing. I also enjoy learning about new technology and finding ways to combine my technical interests with the things I enjoy outside of school.',
+    ],
+    image: '/leonardo.jpg',
+  })
+})
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
